@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Portfólio WEB </title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://avatars0.githubusercontent.com/u/64554444?s=460&u=65de00ff994c65e3f21aed5bc1e737743500c087&v=4" alt="" width="25%">
+        </div>
+    </header>
+
+    <div class="conteudo">
+        <h2>Sobre Mim</h2>
+        <h3> Meu nome é Yasmin da Silveira Mari, sou estudante de informática do primeiro módulo e apaixonada
+            por arte. Nesse cantinho você verá um pouquinho de mim e dos projetos que eu já fiz.
+        </h3>
+        <br>
+        <h2>Links do GitHub para você conhecer alguns projetos meus</h2>
+
+        <div class="link">
+            <h3><a href="https://github.com/YasminSilveira/AtelierDeViagem"> Site de viagens</a></h3>
+            <h3><a href="https://github.com/YasminSilveira/LosPampasCommit"> Site de Hamburgueres</a></h3>
+            <h3><a href="https://github.com/YasminSilveira/desafio6Q8"> Programação</a></h3>
+            <h3><a href="https://github.com/YasminSilveira/desafio6Q8"> Programação</a></h3>
+
+        </div>
+        <br>
+        <div class="title">
+            <h2> Artes que eu amo </h2>
+        </div>
+        <div class="w3-content w3-display-container" style="max-width:50%">
+            <img class="mySlides" src="./img/foto1.jpeg" style="width:50%">
+            <img class="mySlides" src="./img/foto2.jpeg" style="width:24%">
+            <img class="mySlides" src="./img/foto3.jpeg" style="width:49%">
+            <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle"
+                style="width:100%">
+                <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+                <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+                <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+                <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+                <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+
+    </footer>
+
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function currentDiv(n) {
+            showDivs(slideIndex = n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" w3-white", "");
+            }
+            x[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " w3-white";
+        }
+    </script>
+
+</body>
+
+</html> 
